@@ -3,13 +3,13 @@
 ---
 ### Recreate Conceptual Diagram in Lucid Charts or on a napkin
 
-![Alt text](med/Lucid%20charts_concept.png)
+![Alt text](assets/Lucid%20charts_concept.png)
 
 [Link for lucid charts](https://lucid.app/lucidchart/b81bf1c7-9581-40e7-bc3c-2fbfc46cbd30/edit?invitationId=inv_a2ce82a4-7aaa-4c90-95ea-c5de32bf3104)
 
 ### Recreated logical diagram in Lucid Charts
 
-![Alt text](med/Lucid%20charts_logic.png)
+![Alt text](assets/Lucid%20charts_logic.png)
 
 [Link for lucid charts](https://lucid.app/lucidchart/4be4e548-8e2c-4d62-995e-7bac2cda9592/edit?invitationId=inv_a64c8a8e-4665-4410-9152-a39a1b75f107)
 
@@ -85,7 +85,7 @@ You should see something like this:
     "Arn": "arn:aws:iam::655602346534:user/andrewcloudcamp"
 }
 ```
-![Prove of work](med/cli%20user%20.png)
+![Alt text](assets/cli%20user%20.png)
 ## Enable Billing 
 
 We need to turn on Billing Alerts to recieve alerts...
@@ -130,7 +130,7 @@ Check your email and confirm the subscription
 ```sh
 aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
 ```
-![Prove of work](med/Billing%20alarm.PNG)
+![Alt text](assets/Billing%20alarm.PNG)
 
 ## Create an AWS Budget
 
@@ -151,8 +151,7 @@ aws budgets create-budget \
     --budget file://aws/json/budget.json \
     --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
 ```
-![Prove of work](med/Budget.PNG)
-
+![Alt text](assets/Budget.PNG)
 ---
 
 ## Homework Challenges
