@@ -1,5 +1,4 @@
 # Week 1 — App Containerization
-# Week 1 — App Containerization
 
 ## Required homework
 ### Containerzie applications
