@@ -19,18 +19,21 @@ I have created docker files for both frontend and backend and used docker compos
 ![enter image description here](https://github.com/ahmedflqn/aws-bootcamp-cruddur-2023/blob/main/journal/assets/Postgres.PNG?raw=true)
 
 ## Homework challenges
-
- -  Run the dockerfile CMD as an external script
     
 -   Push and tag a image to DockerHub (they have a free tier)
+1.  `docker login --username username`
     
+2.  `docker tag my-image username/my-repo`
+    
+3.  `docker push username/my-repo`
+    ![enter image description here](https://github.com/ahmedflqn/aws-bootcamp-cruddur-2023/blob/main/journal/assets/dockerhub.PNG?raw=true)
 -   Use multi-stage building for a Dockerfile build
+![Multi stage dockerfile](https://github.com/ahmedflqn/aws-bootcamp-cruddur-2023/blob/main/journal/assets/multistage.PNG?raw=true)
     
 -   Implement a healthcheck in the V3 Docker compose file
+added health check to docker compose file
+    ![Health check](https://github.com/ahmedflqn/aws-bootcamp-cruddur-2023/blob/main/journal/assets/health%20check.PNG?raw=true)
     
--   Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
-    
--   Learn how to install Docker on your localmachine and get the same containers running outside of Gitpod / Codespaces
     
 -   Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes.List item
-
+![run docker on ec2](https://github.com/ahmedflqn/aws-bootcamp-cruddur-2023/blob/main/journal/assets/ec2.PNG?raw=true)
