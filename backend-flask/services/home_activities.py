@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 class HomeActivities:
+  LOGGER.info('Hello Cloudwatch! from  /api/activities/home')
   def run():
     now = datetime.now(timezone.utc).astimezone()
     results = [{
