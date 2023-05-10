@@ -89,6 +89,19 @@ def rollbar_test():
     return "Hello World!"
 
 rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
+
+
+frontend = os.getenv('FRONTEND_URL')
+backend = os.getenv('BACKEND_URL')
+origins = [frontend, backend]
+cors = CORS(
+  app, 
+  resources={r"/api/*": {"origins": origins}},
+  headers=['Content-Type', 'Authorization'], 
+  expose_headers='Authorization',
+  methods="OPTIONS,GET,HEAD,POST"
+)
+
 # @app.before_first_request
 with app.app_context():
   def init_rollbar():
@@ -106,17 +119,6 @@ with app.app_context():
       # send exceptions from `app` to rollbar, using flask's signal system.
       got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
-
-frontend = os.getenv('FRONTEND_URL')
-backend = os.getenv('BACKEND_URL')
-origins = [frontend, backend]
-cors = CORS(
-  app, 
-  resources={r"/api/*": {"origins": origins}},
-  headers=['Content-Type', 'Authorization'], 
-  expose_headers='Authorization',
-  methods="OPTIONS,GET,HEAD,POST"
-)
 
 @app.after_request
 def after_request(response):
@@ -167,6 +169,10 @@ def data_notifications():
 @app.route("/api/activities/home", methods=['GET'])
 @xray_recorder.capture('activities_home')
 def data_home():
+  print("asdasdasdasdadsadasdasdasdasd")
+  print("asdasdasdasdadsadasdasdasdasd")
+  print("asdasdasdasdadsadasdasdasdasd")
+
 
   access_token = extract_access_token(request.headers)
   try:
